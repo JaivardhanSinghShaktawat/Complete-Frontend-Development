@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images</title>
+  </head>
+  <body>
+    <h1>Images</h1>
+    <!-- Use of Images  -->
+    <figure>
+      <img
+        src="https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg"
+        alt="landscape image"
+        title="landscape image"
+        height="auto"
+        width="100%"
+        loading="lazy"
+        style="max-width: 500px"
+      />
+      <figcaption style="position: relative; left: -3090000px">
+        Landscape Image
+      </figcaption>
+    </figure>
+
+    <!-- Creating a hyperlink to an image  -->
+    <a
+      href="https://www.pexels.com/photo/green-fields-near-brown-mountain-210243/"
+      target="_blank"
+    >
+      <img
+        src="https://images.pexels.com/photos/67517/pexels-photo-67517.jpeg"
+        alt="mountains image"
+        title="mountains image"
+        height="auto"
+        width="100%"
+        loading="lazy"
+        style="max-width: 600px"
+      />
+    </a>
+
+    <!-- Creating a hyperlink on a specific part of an image.  -->
+    <img
+      src="https://images.pexels.com/photos/533919/pexels-photo-533919.jpeg"
+      alt="sunset"
+      title="sunset"
+      height="auto"
+      width="100%"
+      style="max-width: 500px"
+      loading="lazy"
+      usemap="#sunset-image"
+    />
+
+    <map name="sunset-image">
+      <area
+        shape="rect"
+        coords="0,0,200,200"
+        href="https://www.pexels.com/photo/photo-of-body-of-water-533919/"
+        alt="sunset image"
+        target="_blank"
+      />
+    </map>
+
+    <!-- Using picture element to display different images at different resolutions  -->
+    <picture>
+      <source
+        srcset="
+          https://images.pexels.com/photos/533667/pexels-photo-533667.jpeg
+        "
+        media="(max-width : 400px)"
+        type="image/jpeg"
+      />
+      <source
+        srcset="
+          https://images.pexels.com/photos/531972/pexels-photo-531972.jpeg
+        "
+        media="(max-width : 767px)"
+        type="image/jpeg"
+      />
+      <source
+        srcset="
+          https://images.pexels.com/photos/531829/pexels-photo-531829.jpeg
+        "
+        media="(max-width:1100px)"
+        type="image/jpeg"
+      />
+      <source
+        srcset="
+          https://images.pexels.com/photos/531754/pexels-photo-531754.jpeg
+        "
+        media="()"
+        type="image/jpeg"
+      />
+      <img
+        src="https://images.pexels.com/photos/531602/pexels-photo-531602.jpeg"
+        alt="landscape image"
+        title="landscape image"
+        height="auto"
+        width="100%"
+      />
+    </picture>
+  </body>
+</html>
