@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Elements</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        padding: 0.5rem;
+        font-size: 2rem;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      footer {
+        background-color: #000;
+        color: #fff;
+      }
+
+      nav {
+        background-color: #000;
+        color: #fff;
+        padding: 1rem;
+      }
+
+      nav ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        gap: 2rem;
+
+        & a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+
+      main {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header section  -->
+    <header>
+      <!-- navigaion menu  -->
+      <nav>
+        <ul>
+          <li><a href="#" target="_blank">Home</a></li>
+          <li><a href="#" target="_blank">Services</a></li>
+          <li><a href="#" target="_blank">About</a></li>
+          <li><a href="#" target="_blank">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main section  -->
+    <main
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+      "
+    >
+      <h1>It is the main content</h1>
+      <details>
+        <summary>
+          What is <abbr title="HyperText Markup Language">HTML?</abbr>
+        </summary>
+        <abbr title="HyperText Markup Language">HTML</abbr>
+        stands for <dfn>HyperText Markup Language</dfn>
+      </details>
+    </main>
+
+    <!-- footer section  -->
+    <footer>
+      <center>
+        <p>
+          <small>Copyright &copy; <time datetime="2025">2025</time></small>
+        </p>
+      </center>
+    </footer>
+  </body>
+</html>
