@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attributes</title>
+  </head>
+  <body>
+    <h1>Attributes In HTML</h1>
+    <!-- Local Attributes  -->
+    <a href="https://www.google.com" target="_blank">Google</a><br />
+    <figure>
+      <img
+        srcset="
+          https://images.pexels.com/photos/46160/field-clouds-sky-earth-46160.jpeg
+        "
+        alt="nature image"
+        loading="lazy"
+        height="auto"
+        width="100%"
+        style="width: 100%; max-width: 500px"
+      />
+      <figcaption>Nature Image</figcaption>
+    </figure>
+
+    <!-- Global Attributes  -->
+    <p
+      lang="en"
+      title="Coding"
+      contenteditable="true"
+      spellcheck="true"
+      dir="ltr"
+    >
+      Coding is fun
+    </p>
+
+    <p hidden data-para="para-content">It is hidden content</p>
+
+    <div
+      draggable="true"
+      class="container"
+      style="
+        height: 200px;
+        width: 200px;
+        background-color: orange;
+        border-radius: 50%;
+        cursor: pointer;
+      "
+    ></div>
+
+    <!-- Custom Attributes  -->
+    <div class="container" container="div-container">coding is fun</div>
+  </body>
+</html>
