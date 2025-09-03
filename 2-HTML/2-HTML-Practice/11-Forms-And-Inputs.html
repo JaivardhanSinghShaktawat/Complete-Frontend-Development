@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms And Inputs</title>
+  </head>
+  <body>
+    <form action="server.js" method="post">
+      <fieldset>
+        <legend style="text-align: center">Form</legend>
+        <!-- input text  -->
+        <div class="form-group">
+          <label for="username">Username : </label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="enter your name"
+            autofocus
+            minlength="4"
+            maxlength="25"
+            required
+            autocomplete="on"
+          />
+        </div>
+        <br />
+        <!-- input number  -->
+        <div class="form-group">
+          <label for="age">age : </label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            placeholder="enter your age"
+            min="10"
+            max="40"
+          />
+        </div>
+        <br />
+        <!-- input telephone  -->
+        <div class="form-group">
+          <label for="phone">phone : </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="enter your phone"
+            autocomplete="on"
+          />
+        </div>
+        <br />
+        <!-- input email  -->
+        <div class="form-group">
+          <label for="user-email">email : </label>
+          <input
+            type="email"
+            id="user-email"
+            name="email"
+            placeholder="enter your email"
+            required
+            autocomplete="on"
+          />
+        </div>
+        <br />
+        <!-- input password  -->
+        <div class="form-group">
+          <label for="user-password">password : </label>
+          <input
+            type="password"
+            id="user-password"
+            name="password"
+            placeholder="enter your password"
+            minlength="8"
+            required
+          />
+        </div>
+        <br />
+        <!-- input radio  -->
+        <div class="form-group">
+          gender :
+          <label for="user-male">Male : </label>
+          <input
+            type="radio"
+            id="user-male"
+            name="user-gender"
+            value="male"
+            required
+          />
+          <label for="user-female">Female :</label>
+          <input
+            type="radio"
+            id="user-female"
+            name="user-gender"
+            value="female"
+            required
+          />
+        </div>
+        <br />
+        <!-- input checkboxes  -->
+        <div class="form-group">
+          Select Your Skills :
+          <br />
+          <br />
+          <div>
+            <label for="html">HTML : </label>
+            <input type="checkbox" name="html" id="html" value="HTML" /><br />
+          </div>
+          <div>
+            <label for="CSS">CSS : </label>
+            <input type="checkbox" name="css" id="css" value="CSS" />
+          </div>
+          <div>
+            <label for="javascript">JavaScript : </label>
+            <input
+              type="checkbox"
+              name="javascript"
+              id="javascript"
+              value="JavaScript"
+            />
+          </div>
+          <div>
+            <label for="reactjs">ReactJs : </label>
+            <input
+              type="checkbox"
+              name="reactjs"
+              id="reactjs"
+              value="ReactJs"
+            />
+          </div>
+        </div>
+        <br />
+
+        <!-- input file  -->
+        <div class="form-group">
+          <label for="resume">upload your resume:</label>
+          <input
+            type="file"
+            name="resume"
+            id="resume"
+            accept="application/pdf"
+          />
+        </div>
+        <br />
+
+        <!-- input color  -->
+        <div class="form-group">
+          <label for="favourite-color">select your favourite color:</label>
+          <input type="color" name="favourite-color" id="favourite-color" />
+        </div>
+        <br />
+
+        <!-- input url  -->
+        <div class="form-group">
+          <label for="protfolio-link">enter your portfolio url:</label>
+          <input
+            type="url"
+            name="protfolio-link"
+            id="protfolio-link"
+            placeholder="enter your portfolio url"
+          />
+        </div>
+        <br />
+
+        <!-- input search    -->
+        <div class="form-group">
+          <search>
+            <label for="search-bar">search on web :</label>
+            <input
+              type="search"
+              name="search-bar"
+              id="search-bar"
+              placeholder="search on web"
+            />
+          </search>
+        </div>
+        <br />
+
+        <!-- input date -->
+        <div class="form-group">
+          <label for="join-date">Select appropriate time to join : </label>
+          <input type="date" name="join-date" id="join-date" />
+        </div>
+        <br />
+
+        <!-- input time  -->
+        <div class="form-group">
+          <label for="current-time"
+            >Select Time When You Are Filling This Form :
+          </label>
+          <input type="time" name="current-time" id="current-time" />
+        </div>
+        <br />
+
+        <!-- input week  -->
+        <div class="form-group">
+          <label for="join-week">Select joining week : </label>
+          <input type="week" name="join-week" id="join-week" />
+        </div>
+        <br />
+
+        <!-- input month  -->
+        <div class="form-group">
+          <label for="join-month">Select joining month : </label>
+          <input type="month" name="join-month" id="join-month" />
+        </div>
+        <br />
+
+        <!-- dropdowns : select and option  -->
+        <div class="form-group">
+          <label for="tech-stack">Select Tech Stack : </label>
+          <!-- <select name="tech-stack" id="tech-stack" multiple size="5"> -->
+          <select name="tech-stack" id="tech-stack">
+            <option value="Java Full Stack" selected>Java Full Stack</option>
+            <optgroup label="JavaScript Full Stack">
+              <option value="Backend With NextJs">Backend With NextJs</option>
+              <option value="Backend With NestJs">Backend With NestJs</option>
+              <option value="Backend With ExpressJs">
+                Backend With ExpressJs
+              </option>
+            </optgroup>
+
+            <option value="Frontend With ReactJs">Frontend With ReactJs</option>
+            <option value="Backend With NodeJs">Backend With NodeJs</option>
+          </select>
+        </div>
+        <br />
+
+        <!-- dropdowns : datalist -->
+        <div class="form-group">
+          <label for="select-country">Select Country </label>
+          <input
+            type="text"
+            id="select-country"
+            name="select-country"
+            list="select-country-list"
+          />
+          <datalist id="select-country-list">
+            <option value="poland">Poland</option>
+            <option value="london">London</option>
+            <option value="switzerland">Switzerland</option>
+            <option value="india">India</option>
+          </datalist>
+        </div>
+        <br />
+
+        <!-- input range  -->
+        <div class="form-group">
+          <label for="salary-range">Salaray Range</label>
+          <input
+            type="range"
+            min="10000"
+            max="1000000"
+            value="300000"
+            name="salary-range"
+            id="salary-range"
+          />
+        </div>
+        <br />
+
+        <!-- meter element  -->
+        <div class="form-group">
+          <label for="battery-usage">Battery Usage</label>
+          <meter low="20" high="80" min="0" max="100" value="50"></meter>
+        </div>
+        <br />
+
+        <!-- textarea element  -->
+        <div class="form-group">
+          <label for="about-description">Describe yourself in 50 words :</label
+          ><br /><br />
+          <textarea
+            name="about-description"
+            id="about-description"
+            rows="20"
+            cols="40"
+            placeholder="Describe yourself..."
+          ></textarea>
+        </div>
+        <br />
+
+        <!-- progress element  -->
+        <div class="form-group">
+          <label for="form-upload">form upload</label>
+          <progress value="20" min="0" max="100" step="4"></progress>
+        </div>
+        <br />
+
+        <!-- buttons : submit and reset  -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button">Click To See Magic</button>
+
+        <!-- input buttons : submit and reset and normal button (not used much ) -->
+        <!-- <br />
+        <input type="button" value="button" />
+        <input type="submit" value="submit" />
+        <input type="reset" value="reset" /> -->
+      </fieldset>
+    </form>
+  </body>
+</html>
