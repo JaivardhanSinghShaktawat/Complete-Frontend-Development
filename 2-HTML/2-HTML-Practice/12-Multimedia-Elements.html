@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multimedia Elements</title>
+  </head>
+  <body>
+    <!-- adding audio element in our document.  -->
+    <audio
+      src="audio.mp3"
+      controls
+      loop
+      autoplay
+      muted
+      preload="metadata"
+    ></audio>
+
+    <!-- providing multiple different formats of the same audio.  -->
+    <audio controls autoplay loop muted preload="auto">
+      <source src="audio.mp3" type="audio/mpeg" />
+      <source src="audio.wav" type="audio/wav" />
+      <source src="audio.ogg" type="audio/ogg" />
+      You browser does'nt support audio element.
+      <a href="audio.mp3" download="audio">Download Audio</a>
+    </audio>
+
+    <!-- adding video element in our document. -->
+    <video
+      src="video.mp4"
+      controls
+      autoplay
+      muted
+      loop
+      preload="auto"
+      poster="image.jpg"
+    ></video>
+
+    <!-- providing different formats of the same video  -->
+    <video
+      controls
+      autoplay
+      muted
+      loop
+      preload="auto"
+      poster="image.jpg"
+      height="500"
+      width="500"
+    >
+      <source src="video.mp4" type="video/mp4" />
+      <source src="video.webm" type="video/webm" />
+      <source src="video.ogg" type="video/ogg" />
+      <!-- Providing subtitles  -->
+      <track src="video.vtt" srclang="en" kind="subtitles" label="English" />
+      <track src="video.srt" srclang="no" kind="subtitles" label="Norwegian" />
+      Your browser does'nt support video formats.
+      <a href="video.mp4" download="video">Download Video</a>
+    </video>
+
+    <!-- svg : scalable vector graphics  -->
+    <svg height="500" width="100%" style="background-color: orange">
+      <!-- creating a circle  -->
+      <circle
+        r="100"
+        cx="200"
+        cy="200"
+        stroke-width="5"
+        stroke="gray"
+        fill="#f00"
+      />
+
+      <!-- creating a rectangle  -->
+
+      <rect
+        x="400"
+        y="200"
+        height="200"
+        width="200"
+        stroke-width="5"
+        stroke="cyan"
+        fill="purple"
+      />
+    </svg>
+
+    <!-- embed and object to add external multimedia elements  -->
+    <embed src="application.pdf" type="application/pdf" />
+    <object data="application.pdf" type="application/pdf"></object>
+
+    <embed src="image.svg" />
+    <object data="image.svg"></object>
+
+    <!-- The content inside object will be displayed if object fails to load the pdf file. -->
+    <object data="resume.pdf" type="application/pdf">
+      Failed to load pdf file.
+    </object>
+  </body>
+</html>
